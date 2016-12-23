@@ -6,13 +6,13 @@
 #    By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:36:06 by tlernoul          #+#    #+#              #
-#    Updated: 2016/12/22 21:09:32 by tlernoul         ###   ########.fr        #
+#    Updated: 2016/12/23 17:28:05 by tlernoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror 
-FILES = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigit.c \
+SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigit.c \
 		ft_isprint.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 		ft_memdel.c ft_memmove.c ft_memset.c ft_strcat.c ft_strchr.c ft_strdup.c \
 		ft_striter.c ft_striteri.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strncat.c \
@@ -27,16 +27,16 @@ FILES = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigi
 		ft_strupcase.c ft_lstsplit.c
 
 HEADER = libft.h
-SRC = $(FILES:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-$(NAME):
-	gcc $(CFLAGS) -c $(FILES) -I $(HEADER)
-	ar rc $(NAME) $(SRC)
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
-	rm -f $(SRC)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
