@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strclenc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/02 18:57:11 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/02 18:50:16 by tlernoul         ###   ########.fr       */
+/*   Created: 2017/10/02 17:50:07 by tlernoul          #+#    #+#             */
+/*   Updated: 2017/10/02 17:52:43 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+int	ft_strclenc(const char *s, char b, char c)
 {
-	char *s;
+	size_t i;
 
-	if (!(s = (char *)malloc(sizeof(*s) * (size) + 1)))
-		return (NULL);
-	ft_memset(s, '\0', size + 1);
-	return (s);
+	i = 0;
+	while (*s != b)
+		s++;
+	if (s)
+		while (s[i] != c)
+			i++;
+	else
+		return (0);
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/12/22 20:12:57 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/10/02 18:25:46 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,9 @@ char				*ft_strlowcase(char *str);
 char				*ft_strupcase(char *str);
 void				ft_putlst(t_list *elem);
 t_list				*ft_lstsplit(const char *s, char c);
+char				*ft_strappend(char *add, char *end, char l);
+size_t				ft_strclen(const char *s, char c);
+size_t				ft_strlenc(const char *s, char c);
+size_t				ft_strclenc(const char *s, char b, char c);
 
 #endif

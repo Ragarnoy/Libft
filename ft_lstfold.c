@@ -1,24 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstfold.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/02 18:57:11 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/02 18:50:16 by tlernoul         ###   ########.fr       */
+/*   Created: 2017/08/09 15:19:53 by tlernoul          #+#    #+#             */
+/*   Updated: 2017/09/19 13:12:39 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <string.h>
+#include <stdlib.h>
 
-char	*ft_strnew(size_t size)
+int		ft_lstlen(t_list **len)
 {
-	char *s;
+	int i;
 
-	if (!(s = (char *)malloc(sizeof(*s) * (size) + 1)))
+	i = 0;
+	while ((*len)->next)
+	{
+		(*len) = (*len)->next;
+		i++;
+	}
+	return (i);
+}
+
+t_list	*ft_lstfold(void (*f), t_list **tab)
+{
+	int		*i;
+	int		p;
+	t_list	*elem;
+
+	p = 0;
+	if (!(i = (int*)malloc(sizeof(*i) * (ft_lstlen(tab)))))
+		elem = NULL;
+	if (!(tab) || (!(f)))
 		return (NULL);
-	ft_memset(s, '\0', size + 1);
-	return (s);
+	while ((*tab)->next)
+	{
+		i = (*tab)->content;
+		p++;
+		*tab = (*tab)->next;
+	}
+	return (elem);
 }

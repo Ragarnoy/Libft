@@ -6,7 +6,7 @@
 #    By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:36:06 by tlernoul          #+#    #+#              #
-#    Updated: 2016/12/23 17:28:05 by tlernoul         ###   ########.fr        #
+#    Updated: 2017/10/02 18:25:18 by tlernoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigit.
 		ft_lstadd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstiter.c ft_lstmap.c \
 		ft_putlst.c ft_str_is_alpha.c ft_str_is_lowercase.c ft_str_is_numeric.c \
 		ft_str_is_printable.c ft_str_is_uppercase.c ft_strcapitalize.c ft_strlowcase.c \
-		ft_strupcase.c ft_lstsplit.c
+		ft_strupcase.c ft_lstsplit.c ft_strappend.c ft_strclen.c ft_strlenc.c ft_strclenc.c
 
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)

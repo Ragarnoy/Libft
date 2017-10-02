@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/02 18:57:11 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/02 18:50:16 by tlernoul         ###   ########.fr       */
+/*   Created: 2017/09/26 19:50:16 by tlernoul          #+#    #+#             */
+/*   Updated: 2017/09/26 20:13:40 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strappend(char *app, char *end, char l)
 {
-	char *s;
+	char *str;
 
-	if (!(s = (char *)malloc(sizeof(*s) * (size) + 1)))
+	if (app && end)
+		str = ft_strjoin(app, end);
+	else if (app)
+		str = ft_strdup(app);
+	else if (end)
+		str = ft_strdup(end);
+	else
 		return (NULL);
-	ft_memset(s, '\0', size + 1);
-	return (s);
+	if (l == 'f' || l == 'b')
+		free(app);
+	if (l == 's' || l == 'b')
+		free(end);
+	return (str);
 }
