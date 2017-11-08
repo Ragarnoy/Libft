@@ -6,14 +6,14 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/26 19:50:16 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/09/26 20:13:40 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/10/31 16:35:04 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strappend(char *app, char *end, char l)
+char	*ft_strappend(char *app, char *end, int l)
 {
 	char *str;
 
@@ -25,9 +25,9 @@ char	*ft_strappend(char *app, char *end, char l)
 		str = ft_strdup(end);
 	else
 		return (NULL);
-	if (l == 'f' || l == 'b')
-		free(app);
-	if (l == 's' || l == 'b')
-		free(end);
+	if (l == 1 || l == 3)
+		ft_strdel(&app);
+	if (l == 2 || l == 3)
+		ft_strdel(&end);
 	return (str);
 }

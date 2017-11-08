@@ -6,21 +6,21 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 17:50:07 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/02 17:52:43 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/10/24 20:20:47 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strclenc(const char *s, char b, char c)
+size_t	ft_strclenc(const char *s, char b, char c)
 {
 	size_t i;
 
 	i = 0;
-	while (*s != b)
+	while (s && *s != b)
 		s++;
 	if (s)
-		while (s[i] != c)
+		while (s[i] && s[i] != c)
 			i++;
 	else
 		return (0);
