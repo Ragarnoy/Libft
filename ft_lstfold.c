@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 15:19:53 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/09/19 13:12:39 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/13 17:04:07 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int		ft_lstlen(t_list **len)
+static int		ft_lstlen(t_list **len)
 {
 	int i;
 
@@ -27,7 +27,7 @@ int		ft_lstlen(t_list **len)
 	return (i);
 }
 
-t_list	*ft_lstfold(void (*f), t_list **tab)
+t_list			*ft_lstfold(void (*f), t_list **tab)
 {
 	int		*i;
 	int		p;
