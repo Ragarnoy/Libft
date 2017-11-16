@@ -6,13 +6,11 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/22 19:10:22 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/12/23 16:58:50 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:14:22 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
 static char		*ret_w(const char *s, char c, size_t start)
 {

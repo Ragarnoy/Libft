@@ -6,12 +6,10 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 18:55:45 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/12/22 19:11:48 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:20:19 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	ft_countword(const char *s, char c)

@@ -6,11 +6,10 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/26 19:50:16 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/31 16:35:04 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:16:35 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strappend(char *app, char *end, int l)

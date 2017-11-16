@@ -6,13 +6,11 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 18:18:26 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/12/22 17:48:49 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:20:40 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strtrim(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:43:43 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/11/29 17:49:09 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:16:58 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

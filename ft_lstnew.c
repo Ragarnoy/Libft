@@ -6,13 +6,11 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/16 18:20:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/12/19 18:00:42 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:14:15 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
 t_list	*ft_lstnew(const void *content, size_t content_size)
 {

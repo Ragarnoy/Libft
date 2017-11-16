@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/31 16:35:37 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:18:07 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FT_LIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {
@@ -66,7 +68,7 @@ int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strjoin(const char *s1, const char *s2);
 char				*ft_strtrim(const char *s);
 char				*ft_strnew(size_t size);
-char				ft_strdel(char **as);
+void				ft_strdel(char **as);
 void				ft_putstr(const char *str);
 void				ft_putchar(char c);
 void				ft_putendl(const char *s);

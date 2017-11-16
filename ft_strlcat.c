@@ -6,11 +6,10 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 16:46:17 by tlernoul          #+#    #+#             */
-/*   Updated: 2016/12/22 19:13:04 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:18:56 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
