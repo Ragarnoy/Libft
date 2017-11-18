@@ -6,12 +6,15 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/11/16 17:18:07 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/18 18:19:06 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
+# define BUFF_SIZE 10
+# define MAX_FD 4000
+# define MAX_INT 2147483647
 
 # include <string.h>
 # include <stdlib.h>
@@ -100,5 +103,6 @@ size_t				ft_strclen(const char *s, char c);
 size_t				ft_strlenc(const char *s, char c);
 size_t				ft_strclenc(const char *s, char b, char c);
 int					ft_strrep(char *s, char r, char c);
+int					get_next_line(const int fd, char **line);
 
 #endif
