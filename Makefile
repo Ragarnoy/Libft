@@ -6,12 +6,12 @@
 #    By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:36:06 by tlernoul          #+#    #+#              #
-#    Updated: 2017/11/18 18:19:28 by tlernoul         ###   ########.fr        #
+#    Updated: 2017/11/22 00:12:39 by tlernoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
 SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigit.c \
 		ft_isprint.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 		ft_memdel.c ft_memmove.c ft_memset.c ft_strcat.c ft_strchr.c ft_strdup.c \
@@ -25,21 +25,30 @@ SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigit.
 		ft_putlst.c ft_str_is_alpha.c ft_str_is_lowercase.c ft_str_is_numeric.c \
 		ft_str_is_printable.c ft_str_is_uppercase.c ft_strcapitalize.c ft_strlowcase.c \
 		ft_strupcase.c ft_lstsplit.c ft_strappend.c ft_strclen.c ft_strlenc.c ft_strclenc.c \
-		ft_strrep.c get_next_line.c
+		ft_strrep.c get_next_line.c ft_countwords.c ft_retwords.c
 
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
+%.o: %.c
+	@printf "Compiling files..... $@                          \r"
+	@gcc -c -o $@ $^
+
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@printf "Functions archived.                              \n"
+	@ar rc $(NAME) $(OBJ)
+	@printf "Library created.                                 \n"
+	@ranlib $(NAME)
+	@printf "Done.                                            \n"
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
+	@printf "Object Files cleaned.                            \n"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@printf "All files purged.                                \n"
 
 re: fclean all

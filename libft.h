@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/11/18 18:19:06 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:36:02 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,7 @@ size_t				ft_strlenc(const char *s, char c);
 size_t				ft_strclenc(const char *s, char b, char c);
 int					ft_strrep(char *s, char r, char c);
 int					get_next_line(const int fd, char **line);
+size_t				ft_countwords(const char *s, char c);
+char				**ft_retwords(const char *s, char c);
 
 #endif

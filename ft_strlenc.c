@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 17:34:28 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/10/02 18:24:14 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/11/20 16:03:57 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlenc(const char *s, char c)
 	size_t chk;
 
 	i = -1;
-	while (s++[i] != c && s)
+	while (s[++i] != c && s)
 		if (s[i] == c)
 			chk = 1;
 	if (!chk)

@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/28 18:08:37 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/11/21 23:52:22 by tlernoul         ###   ########.fr       */
+/*   Created: 2016/12/01 18:55:45 by tlernoul          #+#    #+#             */
+/*   Updated: 2017/11/18 20:48:18 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_countwords(const char *s, char c)
 {
-	void *aloc;
+	size_t w;
+	size_t i;
 
-	if (!(aloc = (char*)malloc(size)))
-		return (NULL);
-	ft_bzero(aloc, size);
-	return (aloc);
+	if (!s)
+		return (0);
+	w = 0;
+	i = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
+		{
+			w++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+	}
+	return (w);
 }
