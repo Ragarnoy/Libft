@@ -6,12 +6,12 @@
 #    By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:36:06 by tlernoul          #+#    #+#              #
-#    Updated: 2017/11/22 00:12:39 by tlernoul         ###   ########.fr        #
+#    Updated: 2017/12/07 22:10:10 by tlernoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isblank.c ft_isdigit.c \
 		ft_isprint.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 		ft_memdel.c ft_memmove.c ft_memset.c ft_strcat.c ft_strchr.c ft_strdup.c \
@@ -37,18 +37,18 @@ all : $(NAME)
 	@gcc -c -o $@ $^
 
 $(NAME): $(OBJ)
-	@printf "Functions archived.                              \n"
+	@printf "Functions archived. \033[32m✔\033[0m             \n"
 	@ar rc $(NAME) $(OBJ)
-	@printf "Library created.                                 \n"
+	@printf "Library created. \033[32m✔\033[0m                \n"
 	@ranlib $(NAME)
 	@printf "Done.                                            \n"
 
 clean:
 	@rm -f $(OBJ)
-	@printf "Object Files cleaned.                            \n"
+	@printf "Object Files cleaned. \033[32m✔\033[0m           \n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@printf "All files purged.                                \n"
+	@printf "All files purged. \033[32m✔\033[0m               \n"
 
 re: fclean all

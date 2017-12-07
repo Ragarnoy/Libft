@@ -6,13 +6,13 @@
 /*   By: tlernoul <tlernoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/24 20:39:50 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/11/18 18:19:15 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/12/07 22:07:07 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**multi_fd(int fd)
+static char	**multi_fd(int fd)
 {
 	static char		***mfd = NULL;
 
@@ -31,7 +31,17 @@ char	**multi_fd(int fd)
 	return (NULL);
 }
 
-int		get_next_line(const int fd, char **line)
+static int	checkerror(int end, char **s)
+{
+	if (end == -1)
+	{
+		ft_strdel(s);
+		return (0);
+	}
+	return (1);
+}
+
+int			get_next_line(const int fd, char **line)
 {
 	char		*buf;
 	int			end;
@@ -47,7 +57,7 @@ int		get_next_line(const int fd, char **line)
 		*save = ft_strappend(*save, buf, 1);
 		ft_strclr(buf);
 	}
-	if (end == -1)
+	if (!(checkerror(end, &buf)))
 		return (-1);
 	*line = (ft_strchr(*save, '\n') ?
 		ft_strsub(*save, 0, ft_strchr(*save, '\n') - *save) : ft_strdup(*save));

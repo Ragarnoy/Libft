@@ -6,7 +6,7 @@
 /*   By: tlernoul <tlernoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 14:48:33 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/11/21 21:41:24 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/12/07 20:02:39 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,7 @@ char	**ft_retwords(const char *s, char c)
 		while (s[i] == c)
 			i++;
 		if (s[i] && s[i] != c)
-		{
-		ft_putnbr(ft_strlenc(s + i, c));
 			ret[j++] = ft_strsub(s, i, ft_strlenc(s + i, c));
-			ft_putendl("");
-		}
 		while (s[i] && s[i] != c)
 			i++;
 	}
