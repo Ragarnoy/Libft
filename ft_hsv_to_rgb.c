@@ -6,12 +6,11 @@
 /*   By: tlernoul <tlernoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/21 16:40:44 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/12/21 17:31:16 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/12/21 18:47:43 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <math.h>
 
 static	t_rgb	getrgb(float m, float r, float g, float b)
 {
@@ -49,6 +48,10 @@ int				hsv_to_rgb(t_hsv hsv)
 	float	x;
 	float	c;
 
+	if (hsv.h < 0 || hsv.s > 1.0 || hsv.s < 0 || hsv.v > 1.0 || hsv.v < 0)
+		return (-1);
+	if (hsv.h > 360)
+		hsv.h = fmod(hsv.h, 360);
 	hsv.h = hsv.h / 60;
 	c = hsv.v * hsv.s;
 	x = c * (1.0 - fabs(fmod(hsv.h, 2.0) - 1.0));

@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/12/21 17:32:33 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/12/21 18:31:39 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <math.h>
 
 typedef struct			s_rgb
 {
@@ -49,6 +50,8 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_hsl_to_rgb(t_hsl hsl);
+int					ft_hsv_to_rgb(t_hsv hsv);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
@@ -129,7 +132,5 @@ int					ft_strrep(char *s, char r, char c);
 int					get_next_line(const int fd, char **line);
 size_t				ft_countwords(const char *s, char c);
 char				**ft_retwords(const char *s, char c);
-int					ft_hsl_to_rgb(t_hsl hsl);
-int					ft_hsv_to_rgb(t_hsl hsl);
 
 #endif
