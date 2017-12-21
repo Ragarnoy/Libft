@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/11/20 15:36:02 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/12/21 17:32:33 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,28 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct			s_rgb
+{
+	int					r;
+	int					g;
+	int					b;
+}						t_rgb;
+
+typedef struct			s_hsl
+{
+	float				h;
+	float				s;
+	float				l;
+}						t_hsl;
+
+typedef struct			s_hsv
+{
+	float				h;
+	float				s;
+	float				v;
+}						t_hsv;
+
 
 typedef struct		s_list
 {
@@ -82,6 +104,7 @@ void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 int					ft_getndigits(int nb);
 char				*ft_itoa(int n);
+char				*ft_itoabase(int n, int base);
 void				ft_lstadd(t_list **alst, t_list *new);
 t_list				*ft_lstnew(const void *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
@@ -106,5 +129,7 @@ int					ft_strrep(char *s, char r, char c);
 int					get_next_line(const int fd, char **line);
 size_t				ft_countwords(const char *s, char c);
 char				**ft_retwords(const char *s, char c);
+int					ft_hsl_to_rgb(t_hsl hsl);
+int					ft_hsv_to_rgb(t_hsl hsl);
 
 #endif
