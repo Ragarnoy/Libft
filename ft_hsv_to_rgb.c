@@ -6,7 +6,7 @@
 /*   By: tlernoul <tlernoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/21 16:40:44 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/12/21 18:47:43 by tlernoul         ###   ########.fr       */
+/*   Updated: 2017/12/21 18:54:03 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static	int		gethexa(t_hsv hsv, float x, float c)
 	return ((rgb.r & 0xff) << 16) + ((rgb.g & 0xff) << 8) + (rgb.b & 0xff);
 }
 
-int				hsv_to_rgb(t_hsv hsv)
+int				ft_hsv_to_rgb(t_hsv hsv)
 {
 	float	x;
 	float	c;
