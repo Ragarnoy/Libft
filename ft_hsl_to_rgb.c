@@ -6,7 +6,7 @@
 /*   By: tlernoul <tlernoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/21 16:40:44 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/12/21 18:53:54 by tlernoul         ###   ########.fr       */
+/*   Updated: 2018/01/09 21:40:14 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,16 @@ int				ft_hsl_to_rgb(t_hsl hsl)
 	float	x;
 	float	c;
 
-	if (hsl.h < 0 || hsl.s > 1.0 || hsl.s < 0 || hsl.l > 1.0 || hsl.l < 0)
-		return (-1);
+	if (hsl.l > 1.0)
+		hsl.l = 1.0;
+	else if (hsl.l < 0)
+		hsl.l = 0;
+	if (hsl.s > 1.0)
+		hsl.s = 1.0;
+	else if (hsl.s < 0)
+		hsl.s = 0;
+	if (hsl.h < 0)
+		hsl.h = fabs(hsl.h);
 	if (hsl.h > 360)
 		hsl.h = fmod(hsl.h, 360);
 	hsl.h = hsl.h / 60;

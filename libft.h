@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2017/12/21 18:31:39 by tlernoul         ###   ########.fr       */
+/*   Updated: 2018/01/14 02:43:34 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,26 @@
 # include <unistd.h>
 # include <math.h>
 
-typedef struct			s_rgb
+typedef struct		s_rgb
 {
-	int					r;
-	int					g;
-	int					b;
-}						t_rgb;
+	int				r;
+	int				g;
+	int				b;
+}					t_rgb;
 
-typedef struct			s_hsl
+typedef struct		s_hsl
 {
-	float				h;
-	float				s;
-	float				l;
-}						t_hsl;
+	float			h;
+	float			s;
+	float			l;
+}					t_hsl;
 
-typedef struct			s_hsv
+typedef struct		s_hsv
 {
-	float				h;
-	float				s;
-	float				v;
-}						t_hsv;
-
+	float			h;
+	float			s;
+	float			v;
+}					t_hsv;
 
 typedef struct		s_list
 {
@@ -85,6 +84,7 @@ int					ft_toupper(int c);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strcmp_nocase(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strstr(const char *str, const char *to_find);
 char				*ft_strnstr(const char *str, const char *to_find,
