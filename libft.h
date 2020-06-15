@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2018/01/28 23:38:49 by tlernoul         ###   ########.fr       */
+/*   Updated: 2020/06/15 20:25:24 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,45 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct      __attribute__((__packed__)) s_bmp_fileheader
+{
+	unsigned short  type;
+	unsigned int    size;
+	unsigned short  r1;
+	unsigned short  r2;
+	unsigned int    offset;
+}                   t_fileheader;
+
+typedef struct      __attribute__((__packed__)) s_bmp_infoheader
+{
+	unsigned int    size;
+	unsigned int    width;
+	unsigned int    height;
+	unsigned short  planes;
+	unsigned short  bitcount;
+	unsigned int    compression;
+	unsigned int    imgsize;
+	unsigned int    x_res;
+	unsigned int    y_res;
+	unsigned int    num_colors;
+	unsigned int    important_colors;
+}                   t_infoheader;
+
+typedef struct      __attribute__((__packed__)) s_bmp_image
+{
+	unsigned int    a;
+	unsigned int    r;
+	unsigned int    g;
+	unsigned int    b;
+}                   t_image;
+
+typedef struct      s_bmp
+{
+	t_fileheader    fheader;
+	t_infoheader    iheader;
+	t_image         *img;
+}                   t_bmp;
 
 int					ft_hsl_to_rgb(t_hsl hsl);
 int					ft_hsv_to_rgb(t_hsv hsv);
