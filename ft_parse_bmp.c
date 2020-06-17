@@ -6,12 +6,13 @@
 /*   By: tlernoul <tlernoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/15 17:47:02 by tlernoul          #+#    #+#             */
-/*   Updated: 2020/06/17 14:12:12 by tlernoul         ###   ########.fr       */
+/*   Updated: 2020/06/17 16:48:46 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <fcntl.h>
+#include <stdio.h>
 
 unsigned char	*read_pixel(int size, int fd)
 {

@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2020/06/17 14:16:03 by tlernoul         ###   ########.fr       */
+/*   Updated: 2020/06/17 16:43:51 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ struct				s_bmp_fileheader
 	unsigned short	r2;
 	unsigned int	offset;
 	unsigned int	size;
-	short			width;
-	short			height;
+	int				width;
+	int				height;
 	unsigned short	planes;
 	unsigned short	bitcount;
 	unsigned int	compression;
