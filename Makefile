@@ -6,7 +6,7 @@
 #    By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/29 16:36:06 by tlernoul          #+#    #+#              #
-#    Updated: 2018/01/07 00:07:19 by tlernoul         ###   ########.fr        #
+#    Updated: 2020/06/23 12:18:34 by tlernoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ all : $(NAME)
 
 %.o: %.c
 	@printf "Compiling files..... $@                                   \r"
-	@gcc -c -o $@ $^
+	@clang -c -o $@ $^
 
 $(NAME): $(OBJ)
 	@printf "Functions archived. \033[32m✔\033[0m                      \n"

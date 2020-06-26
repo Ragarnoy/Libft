@@ -6,7 +6,7 @@
 /*   By: tlernoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:40:27 by tlernoul          #+#    #+#             */
-/*   Updated: 2020/06/18 13:38:41 by tlernoul         ###   ########.fr       */
+/*   Updated: 2020/06/23 12:18:34 by tlernoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define MAX_FD 400
 # define MAX_INT 2147483647
 
+# include <stdint.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
